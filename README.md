@@ -9,6 +9,18 @@ The goal is to show how you can:
 - Write code that is **agnostic to the model type**
 - Easily extend the system with new models in the future
 
+## Why use this approach?
+
+In real-world Machine Learning projects, you often need to:
+
+1. **Switch models easily** – For example, today you may use GPT, tomorrow the client may want Gemini or another LLM.
+2. **Keep code modular and maintainable** – By defining an abstract interface, you can separate the “what” (methods like `train` and `predict`) from the “how” (the implementation for each specific model).
+3. **Reduce errors and save time** – Once the abstract interface is defined, adding new models requires minimal changes, avoiding bugs in the rest of the code.
+4. **Follow good software engineering practices** – Object-oriented programming, abstraction, and design patterns like Strategy or Dependency Inversion make your ML code professional and production-ready.
+5. **Improve readability and collaboration** – Team members can understand the workflow quickly, because every model follows the same interface.
+
+This approach is widely used in **consulting and production environments**, where flexibility, maintainability, and clean design are more important than the exact choice of model.
+
 >  This code is for **educational and demonstration purposes only**. The training logic is simulated.
 
 ## Requirements
