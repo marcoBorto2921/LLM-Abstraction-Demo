@@ -9,6 +9,23 @@ The goal is to show how you can:
 - Write code that is **agnostic to the model type**
 - Easily extend the system with new models in the future
 
+## What are Abstract Classes?
+
+An **abstract class** in object-oriented programming is a class that:
+
+1. **Cannot be instantiated directly** – You cannot create an object from an abstract class. It only defines a “blueprint”.
+2. **Defines an interface for subclasses** – It declares methods that all child classes must implement.
+3. **Ensures consistency** – All classes that inherit from the abstract class follow the same contract, making code more predictable and modular.
+
+### Why use abstract classes?
+
+- **Enforce a structure**: You guarantee that every model (GPT, Gemini, etc.) has the same core methods, such as `train()` and `predict()`.
+- **Separate what from how**: The abstract class defines *what* should be done, while the concrete classes define *how* it is done.
+- **Make code flexible**: You can add new models later without changing the rest of the system.
+- **Support good software design**: Encourages practices like **abstraction**, **polymorphism**, and **loose coupling**.
+
+In this demo, `LLMProvider` is the abstract class, and `GPTProvider` and `GeminiProvider` are concrete classes that implement its methods.
+
 ## Why use this approach?
 
 In real-world Machine Learning projects, you often need to:
